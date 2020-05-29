@@ -1,0 +1,34 @@
+ Discretisation with k-means clustering
+
+This discretisation method consists in applying k-means clustering to the continuous variable.
+
+Briefly, the algorithm works as follows:
+
+- 1) Initialization: random creation of K centers
+- 2) Each data point is associated with the closest center
+- 3) Each center position is re-computed as the center of its associated points
+
+Steps 2 and 3 are repeated until convergence is reached. The algorithm minimises the pairwise 
+squared deviations of points within the same cluster.
+
+More details about k-means [here](https://en.wikipedia.org/wiki/K-means_clustering)
+
+Nice blog with graphical explanation of k-means 
+(https://towardsdatascience.com/how-does-k-means-clustering-in-machine-learning-work-fdaaaf5acfa0) 
+
+Note that the user, needs to define the number of clusters, as with equal width and equal 
+frequency discretisation.
+
+ Opinion:
+
+We don't see how this technique is different from equal width discretisation, when the 
+variables are continuous throughout the value range. Potentially it would make a different 
+if the values were arranged in real clusters.
+
+So my recommendation is, unless you have reasons to believe that the values of the variable 
+are organised in clusters, then use equal width discretisation as an alternative to this method.
+
+
+ In this demo
+
+We will learn how to perform k-means discretisation using Scikit-learn
