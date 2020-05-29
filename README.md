@@ -53,7 +53,7 @@ There is no rule of thumb to define N, that is something to determine experiment
 
 ## In this demo
 
-We will learn how to perform equal width binning using the Titanic dataset with
+We will learn how to perform equal width binning using:
 
 - pandas and NumPy
 - Feature-engine
