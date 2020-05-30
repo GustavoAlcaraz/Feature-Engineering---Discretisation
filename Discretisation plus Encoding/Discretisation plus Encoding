@@ -1,0 +1,24 @@
+ Discretisation plus Encoding
+
+What shall we do with the variable after discretisation? should we use the buckets as a numerical 
+variable? or should we use the intervals as categorical variable?
+
+The answer is, you can do either.
+
+If you are building decision tree based algorithms and the output of the discretisation are integers 
+(each integer referring to a bin), then you can use those directly, as decision trees will pick 
+up non-linear relationships between the discretised variable and the target.
+
+If you are building linear models instead, the bins may not necessarily hold a linear 
+relationship with the target. In this case, it may help improve model performance to 
+treat the bins as categories and to one hot encoding, or target guided encodings like mean 
+encoding, weight of evidence, or target guided ordinal encoding.
+
+We can easily do so by combining feature-engine's discretisers and encoders.
+
+ In this demo
+
+We will perform equal frequency discretisation followed by target guided orginal encoding.
+
+If instead you would like to do weight of evidence or mean target encoding, you need only 
+replace the Feature-engine's encoder.
