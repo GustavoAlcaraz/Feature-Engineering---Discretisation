@@ -1,0 +1,30 @@
+ Discretisation with Decision Trees
+
+
+Discretisation with Decision Trees consists in using a decision tree to identify the optimal bins. 
+When a decision tree makes a decision, it assigns an observation to one of n end leaves. 
+Therefore, any decision tree will generate a discrete output, which values are the predictions 
+at each of its n leaves.
+
+How to do discretisation with trees?
+
+- 1) Train a decision tree of limited depth (2, 3  or 4) using the variable we want to discretise and the target.
+- 2) Replace the values by the output returned by the tree. 
+
+
+### Advantages
+
+- Usually the output returned by the decision tree is monotonically related to the target.
+- The tree end nodes, or bins in the discretised variable show decreased entropy: that is, 
+  the observations within each bin are more similar among themselves than to those of other bins.
+
+### Limitations
+
+- Prone over-fitting
+- More importantly, some tuning of the tree parameters needed to obtain the optimal number of splits 
+(e.g., tree depth, minimum number of samples in one partition, maximum number of partitions, 
+and a minimum information gain). This it can be time consuming.
+
+## In this demo
+
+We will learn how to perform discretisation with decision trees.
